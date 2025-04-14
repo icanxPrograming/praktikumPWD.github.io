@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Github & Git</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <h1
@@ -17,44 +18,81 @@
     <section>
       <div class="bag1">
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
-          omnis vitae tenetur! Porro quos perferendis dignissimos et rerum esse,
-          delectus magni deleniti necessitatibus. Voluptatum excepturi alias
-          itaque molestiae vero eum. Officiis ex natus numquam explicabo sequi
-          porro est, ducimus quod quasi quos temporibus. Nesciunt officiis eius
-          quaerat magnam dolores, aliquid perspiciatis, corrupti porro veritatis
-          placeat vero, neque voluptatum modi velit. Mollitia earum aliquam
-          velit eaque. In corporis, quo hic totam tempora velit, recusandae
-          ipsum reprehenderit quaerat ut dolorum, unde magnam dignissimos? Ipsum
-          ipsa maxime, est libero labore eaque repellat fugiat! Debitis libero,
-          nobis vitae quos soluta numquam repellendus enim neque sapiente porro
-          ut quibusdam a ipsam dignissimos eligendi necessitatibus nemo
-          corrupti. Quas repudiandae, id eaque illum doloribus non quisquam
-          laudantium? Alias tempore temporibus fuga neque amet voluptatum quae
-          illum porro voluptatem vero ducimus, perspiciatis distinctio magni
-          nemo eaque reprehenderit, soluta ipsa ut nobis, quam illo unde nihil?
-          Ut, cumque tempore!
+          Git dan GitHub adalah dua alat penting dalam dunia pengembangan
+          perangkat lunak yang sering digunakan secara bersamaan, namun memiliki
+          fungsi yang berbeda. Git adalah sistem kontrol versi (Version Control
+          System/VCS) yang memungkinkan pengembang melacak perubahan pada kode
+          sumber secara lokal. Dengan Git, setiap perubahan yang dilakukan pada
+          proyek bisa dicatat, dibandingkan, dan dikembalikan ke versi
+          sebelumnya jika diperlukan. Git bersifat terdistribusi, artinya setiap
+          pengembang memiliki salinan penuh dari repositori proyek, yang
+          memungkinkan kolaborasi yang efisien bahkan tanpa koneksi internet.
         </p>
       </div>
+    </section>
+    <hr />
+    <section>
       <div class="bag2">
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
-          omnis vitae tenetur! Porro quos perferendis dignissimos et rerum esse,
-          delectus magni deleniti necessitatibus. Voluptatum excepturi alias
-          itaque molestiae vero eum. Officiis ex natus numquam explicabo sequi
-          porro est, ducimus quod quasi quos temporibus. Nesciunt officiis eius
-          quaerat magnam dolores, aliquid perspiciatis, corrupti porro veritatis
-          placeat vero, neque voluptatum modi velit. Mollitia earum aliquam
-          velit eaque. In corporis, quo hic totam tempora velit, recusandae
-          ipsum reprehenderit quaerat ut dolorum, unde magnam dignissimos? Ipsum
-          ipsa maxime, est libero labore eaque repellat fugiat! Debitis libero,
-          nobis vitae quos soluta numquam repellendus enim neque sapiente porro
-          ut quibusdam a ipsam dignissimos eligendi necessitatibus nemo
-          corrupti. Quas repudiandae, id eaque illum doloribus non quisquam
-          laudantium? Alias tempore temporibus fuga neque amet voluptatum quae
-          illum porro voluptatem vero ducimus, perspiciatis distinctio magni
-          nemo eaque reprehenderit, soluta ipsa ut nobis, quam illo unde nihil?
-          Ut, cumque tempore!
+          Sementara itu, GitHub adalah layanan berbasis cloud yang menyediakan
+          antarmuka grafis dan ruang penyimpanan untuk repositori Git. GitHub
+          memungkinkan kolaborasi antar pengembang secara online, termasuk fitur
+          seperti pull request, issue tracking, dan CI/CD. Menurut Linus
+          Torvalds, pencipta Git, dia menciptakan Git karena tidak menemukan
+          sistem kontrol versi yang sesuai untuk pengembangan kernel Linux—ia
+          ingin sesuatu yang cepat, terdistribusi, dan memiliki integritas data
+          yang tinggi. Sedangkan menurut Scott Chacon, salah satu penulis buku
+          Pro Git dan mantan CIO GitHub, GitHub menjadikan Git lebih mudah
+          diakses oleh semua orang dengan menyediakan platform kolaborasi yang
+          intuitif.
+        </p>
+      </div>
+    </section>
+    <hr>
+    <section>
+      <div class="bag3">
+        <p>
+          1. git init <br />Ini akan membuat folder .git tersembunyi di dalam
+          direktori kerja kamu. Folder ini menyimpan semua data dan metadata
+          git, seperti commit history, konfigurasi, dan lain-lain. Setelah git
+          init, folder kamu resmi jadi "proyek Git".
+        </p>
+        <p>
+          2. git add . <br />git add dipakai untuk menambahkan file ke staging
+          area, yaitu area sementara sebelum di-commit. Titik . berarti “semua
+          file yang berubah” — bisa file baru, file yang diedit, atau yang
+          dihapus.
+        </p>
+        <p>
+          3. git commit -m "Commit pertama: inisialisasi proyek dengan README"
+          <br />Perintah ini menyimpan snapshot dari semua file yang ada di
+          staging area. -m berarti kamu menuliskan pesan commit langsung di
+          baris perintah (bisa juga tanpa -m, tapi nanti masuk ke editor). Pesan
+          commit penting buat dokumentasi perubahan.
+        </p>
+        <p>
+          4. git remote add origin https://github.com/username/nama-repo.git
+          <br />Di sini kita menghubungkan repositori lokal ke repositori
+          GitHub.
+          <ul>
+            <li>origin adalah nama default untuk remote utama. Kamu bisa ganti, tapi ini konvensi umum.</li>
+            <li>URL itu adalah alamat dari repo yang kamu buat di GitHub.</li>
+          </ul>
+        </p>
+        <p>5. git config <br>Perintah ini dipakai untuk mengatur identitas pengguna di Git. Biasanya kamu atur ini sebelum commit pertama, supaya Git tahu siapa yang bikin commit-nya.
+        <ul>
+            <li>git config --global user.name "Nama Kamu"</li>
+            <li>git config --global user.email "emailkamu@example.com"</li>
+        </ul>
+        </p>
+        <p>6. git push <br>git push -u origin main
+            <ul>
+                <li>push artinya mengirim semua commit dari branch lokal ke remote (GitHub).</li>
+                <li>origin itu nama remote yang kamu set sebelumnya (git remote add origin).</li>
+                <li>main adalah nama branch yang mau dikirim.
+                </li>
+                <li>-u artinya Git akan menghubungkan branch lokal ke branch remote — jadi ke depannya kamu bisa cukup ketik git push saja, tanpa harus sebut nama remote/branch lagi.</li>
+            </ul>
         </p>
       </div>
     </section>
