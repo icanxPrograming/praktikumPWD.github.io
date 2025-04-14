@@ -1,0 +1,18 @@
+section {
+  padding: 1rem;
+  margin: 1rem;
+}
+.bag1 {
+  text-align: center;
+  border: 1px solid #000;
+  border-radius: 5px;
+  box-shadow: inset;
+  box-sizing: border-box;
+}
+.bag2 {
+  text-align: center;
+  border: 1px solid #000;
+  border-radius: 5px;
+  box-shadow: inset;
+  box-sizing: border-box;
+}
